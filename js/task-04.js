@@ -10,6 +10,7 @@ registerForm.addEventListener('submit', e => {
 
 	if (emailInput.value === '' || passwordInput.value === '') {
 		alert('All form fields must be filled in');
+		return;
 	}
 
 	let formValue = {

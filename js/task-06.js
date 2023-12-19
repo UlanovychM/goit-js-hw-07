@@ -36,6 +36,7 @@ const boxForDiv = document.querySelector('#boxes');
 
 function createBoxes(amount) {
 	if (amount <= 100 && amount > 1) {
+		destroyBoxes();
 		let size = 30;
 		for (let i = 0; i < amount; i++) {
 			const divElem = document.createElement('div');
@@ -53,10 +54,10 @@ function createBoxes(amount) {
 
 function destroyBoxes() {
 	boxForDiv.innerHTML = '';
+	inputValue.value = '';
 }
 
 buttonCreate.addEventListener('click', e => {
-	destroyBoxes();
 	createBoxes(inputValue.value);
 });
 
